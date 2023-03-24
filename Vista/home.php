@@ -3,6 +3,9 @@
 <?php 
 include 'pages/head.php';
 ?>
+<?php
+if(isset($_SESSION['usuario'])){
+?>   
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
@@ -164,3 +167,11 @@ include 'pages/plugins.php';
 ?>
 </body>
 </html>
+<?php
+}else{
+  ?>
+  <script>window.location = "../index.php";</script>
+  <?php
+
+}
+?>
